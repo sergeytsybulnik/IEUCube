@@ -1,0 +1,7 @@
+<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    svg{background: #fff;}
+  </style>
+  <rect x="17.5" y="-17.5" width="225" height="225" rx="47.5" transform="matrix(-1 0 0 1 260 35)" fill="#113766" stroke="white" stroke-width="5"/>
+  <path d="M34.8851 152.082H49.5966L206.063 77.3899L225.108 77.3899V107.767L207.297 107.767L49.5965 182.976L34.885 182.976L34.8851 152.082Z" fill="white"/>
+</svg>
