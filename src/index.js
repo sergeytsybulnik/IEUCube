@@ -60,4 +60,4 @@ window.Webflow.push(() => {
   setTimeout(() => render(), 200);
 });
 
-setTimeout(() => render(), 200);
+// setTimeout(() => render(), 200);

@@ -20,7 +20,7 @@ module.exports = (env) => {
       hints: false
     },
     output: {
-      filename: '[name].cube.js',
+      filename: '[name].[contenthash].cube.js',
       path: path.resolve(__dirname, 'build'),
       clean: true,
       assetModuleFilename: 'assets/[hash][ext][query]'
