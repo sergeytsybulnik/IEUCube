@@ -2,27 +2,27 @@ import initScene from './initScene';
 import { createRubiks } from './createRubiks';
 import { debounce } from './utils';
 import { doRotate, doScramble, rotateInfo, scheduleFlip } from './rotations';
-import { initHtmlControls, initPointerAndTouchListeners } from './initEventListeners';
+// import { initPointerAndTouchListeners } from './initEventListeners';
 import { Clock } from 'three';
 
-const [scene, camera, renderer, controls, DEFAULT_WIDTH, DEFAULT_HEIGHT, sound] = initScene();
+const [scene, camera, renderer, DEFAULT_WIDTH, DEFAULT_HEIGHT] = initScene(); // controls, sound
 const cube = createRubiks();
 
 scene.add(cube);
 scene.add(rotateInfo.rotatorObject);
 
 // initHtmlControls(cube, sound);
-initPointerAndTouchListeners(cube, controls, camera, sound);
+// initPointerAndTouchListeners(cube, controls, camera, sound);
 
-const mouse = {
-  x: 0,
-  y: 0
-};
+// const mouse = {
+//   x: 0,
+//   y: 0
+// };
 
-window.addEventListener('mousemove', (e) => {
-  mouse.x = (e.clientX / window.innerWidth)*2 - 1;
-  mouse.y = -(e.clientY / window.innerHeight)*2 + 1;
-});
+// window.addEventListener('mousemove', (e) => {
+//   mouse.x = (e.clientX / window.innerWidth)*2 - 1;
+//   mouse.y = -(e.clientY / window.innerHeight)*2 + 1;
+// });
 
 // handle window resize
 window.addEventListener('resize', debounce(() => {
@@ -47,7 +47,7 @@ const render = () => {
   scene.position.y = Math.abs(Math.sin(time))/4;
   // cube.position.z = Math.cos(time) * 4;
 
-  scene.rotation.x = mouse.y;
+  // scene.rotation.x = mouse.y;
   // scene.rotation.z = mouse.x;
 
   renderer.render(scene, camera);

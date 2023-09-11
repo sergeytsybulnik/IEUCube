@@ -35,8 +35,13 @@ const initScene = () => {
 
   // document.body.appendChild(renderer.domElement);
 
-  // orbiting camera with mouse
+  // // orbiting camera with mouse
   const controls = new OrbitControls(camera, renderer.domElement);
+  // // to disable zoom
+  controls.enableZoom = false;
+  // // to disable rotation
+  controls.enableRotate = false;
+  // // to disable pan
   controls.enablePan = false;
   controls.minDistance = size * 1.8;
   controls.maxDistance = size * 2;
@@ -82,7 +87,7 @@ const initScene = () => {
   
   }
 
-  return [scene, camera, renderer, controls, DEFAULT_WIDTH, DEFAULT_HEIGHT]; // ,sound
+  return [scene, camera, renderer, DEFAULT_WIDTH, DEFAULT_HEIGHT ]; // ,sound, controls
 };
 
 export default initScene;
